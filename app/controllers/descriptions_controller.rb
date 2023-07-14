@@ -53,9 +53,13 @@ class DescriptionsController < ApplicationController
     end
 
     def description_params
-      { segment: params["segment"], season: params["season"],
-        keywords: params["keywords"], usage: params["usage"], 
-        creativity: params["creativity"] 
+      { 
+        segment: params["segment"],
+        season: params["season"],
+        keywords: params["keywords"],
+        usage: params["usage"], 
+        creativity: params["creativity"],
+        language: params["language"]
       }
     end
 end
