@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 require_relative '../../services/api/openai_client'
+require_relative '../../services/builders/prompt_builder'
+
 
 # Create Ads with given params
 module AdsGenerator
@@ -19,11 +21,9 @@ module AdsGenerator
   end
 
   def create_prompt(description)
-    product = description.product
+    builder = Builders::PromptBuilder.new(description)
 
-    text = description.usage || "sell pitch"
-
-    "Create a #{text} for a product named #{product.name} that belongs to #{handle_empty(product.categories)} categories targeted to #{handle_empty(description.segment)} segment for #{handle_empty(description.season)} season. Include #{handle_empty(description.keywords)} keywords and finish with a call-to-action. Answer in Spanish"
+    builder.build    
   end
 
   private
