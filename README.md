@@ -119,9 +119,11 @@ Create a new description for a specific product. The description will be generat
 
 ```json
 {
-  "description": {
-    "prompt": "Product description prompt"
-  }
+    "segment": "Old people",
+    "keywords": ["Travel", "Europe"],
+    "usage": "Special Offer",
+    "season": "Father's Day",
+    "creativity": "moderate" # Sets temperature. Options are "high", "moderate-high", "moderate", "moderate-low" and "low"
 }
 ```
 
