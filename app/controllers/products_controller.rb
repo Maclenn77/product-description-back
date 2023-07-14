@@ -1,6 +1,15 @@
 class ProductsController < ApplicationController
     before_action :set_product, only: %i[ show update destroy ]
 
+    # Index action
+
+  # GET /products
+     def index
+       @products = Product.all.limit(20)
+
+        render json: @products
+     end
+    
     # Create action
     def create
        @product = Product.new(product_params)
@@ -11,6 +20,10 @@ class ProductsController < ApplicationController
         render json: @product.errors, status: :unprocessable_entity
       end
     end
+
+    def show
+        render json: @product
+      end
 
     private
     # Use callbacks to share common setup or constraints between actions.
