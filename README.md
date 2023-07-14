@@ -1,6 +1,6 @@
 # Rails API for generating Advertising content for Products
 
-This is a Rails API application that serves as a backend for managing products and their descriptions. The descriptions are automatically generated using the OpenAI GPT-3 language model (davinci-003) through (API calls to ChatGPT)[https://platform.openai.com/docs/api-reference].
+This is a Rails API application that serves as a backend for managing products and their descriptions. The descriptions are automatically generated using the OpenAI GPT-3 language model (davinci-003) through [API calls to ChatGPT](https://platform.openai.com/docs/api-reference).
 
 ## Prerequisites
 
