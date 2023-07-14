@@ -40,6 +40,8 @@ module Builders
 
       prompt.with_keywords if keywords?
 
+      prompt.add_call_to_action
+
       prompt.with_language if language?
 
       prompt.final_prompt
@@ -53,13 +55,13 @@ module Builders
 
     def characteristics? = config.dig(:product, :characteristics).present?
 
-    def segment? = config.dig(:product, :segment).present? ? false : true
+    def segment? = config.dig(:description, :segment).present? ? false : true
 
-    def season? = config.dig(:product, :season).present?
+    def season? = config.dig(:description, :season).present?
     
-    def keywords? = config.dig(:product, :keywords).present?
+    def keywords? = config.dig(:description, :keywords).present?
 
-    def language? = config.dig(:product, :language).present?
+    def language? = config.dig(:description, :language).present?
 
   end
 end
