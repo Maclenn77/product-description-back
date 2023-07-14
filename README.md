@@ -2,6 +2,8 @@
 
 This is a Rails API application that serves as a backend for managing products and their descriptions. The descriptions are automatically generated using the OpenAI GPT-3 language model (davinci-003) through [API calls to ChatGPT](https://platform.openai.com/docs/api-reference).
 
+Check front-end [here](https://github.com/Maclenn77/product-description-front).
+
 ## Prerequisites
 
 Before running this application, make sure you have the following installed:
