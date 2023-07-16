@@ -44,6 +44,10 @@ class Prompt
   end
 
   def with_language
-    @prompt += ". Answer in #{config.dig(:description, :language)}"
+    @prompt += ". Write in #{config.dig(:description, :language)}"
+  end
+
+  def add_call_to_action
+    @prompt += ". Add a call to action"
   end
 end
