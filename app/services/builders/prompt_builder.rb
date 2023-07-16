@@ -40,6 +40,7 @@ module Builders
 
       prompt.with_keywords if keywords?
 
+
       prompt.add_call_to_action
 
       prompt.with_language if language?
@@ -61,7 +62,6 @@ module Builders
     
     def keywords? = config.dig(:description, :keywords).present?
 
-    def language? = config.dig(:description, :language).present?
-
+    def language? = config.dig(:description, :language)
   end
 end
